@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with gamification stats, learned real estate marketing vocabulary, DevCoins, and streaks.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The unique Firebase Auth UID of the user."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User display name."
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address."
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "Avatar image URL."
+        },
+        "devCoins": {
+          "type": "number",
+          "description": "DevCoins earned through learning flashcards and pitch deck challenges."
+        },
+        "streak": {
+          "type": "number",
+          "description": "Consecutive days active streak."
+        },
+        "lastActiveDate": {
+          "type": "string",
+          "description": "ISO date string YYYY-MM-DD of last activity."
+        },
+        "learnedWords": {
+          "type": "array",
+          "description": "Array of learned vocabulary item IDs."
+        },
+        "badges": {
+          "type": "array",
+          "description": "Array of unlocked badge IDs."
+        },
+        "highScore": {
+          "type": "number",
+          "description": "High score in Pitch Deck mini-game."
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp string of the last profile update."
+        }
+      },
+      "required": [
+        "userId",
+        "devCoins",
+        "streak",
+        "learnedWords",
+        "badges"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User game progress and profile data restricted strictly to the user."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "EstateLex - Real Estate Marketing Vocabulary",
+  "description": "Master high-impact real estate developer marketing vocabulary with interactive flashcards, pitch deck challenges, DevCoins rewards, and streaks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
